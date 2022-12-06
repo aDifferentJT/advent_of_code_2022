@@ -1,0 +1,11 @@
+#! /usr/local/bin/apl -f
+
+∇ RES ← N DETECT_DISTINCT_CHARACTERS INPUT
+RES ← (({⍵≡∪⍵}¨,/(((⍳N) - 1) ⊖ (N/⍪↑INPUT)))⍳1) + N - 1
+∇
+
+INPUT ← ⎕FIO[49]'./input.txt'
+
+4 DETECT_DISTINCT_CHARACTERS INPUT
+14 DETECT_DISTINCT_CHARACTERS INPUT
+
